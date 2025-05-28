@@ -1,0 +1,786 @@
+
+System Bootstrap, Version 15.
+IOS Image Load Test
+___________________
+Digitally Signed Release Software
+program load complete, entry point: 0x81000000, size: 0x5e81be0
+Self decompressing the image : #################################################                                     ################################################################################                                     ################################################################################                                     ################################################################################                                     ################################################################################                                     ################################################################################                                     ################################################################################                                     ############################################################## [OK]
+
+Smart Init is enabled
+smart init is sizing iomem
+                 TYPE      MEMORY_REQ
+          HWIC Slot 0      0x00200000
+    Onboard devices &
+         buffer pools      0x0228F000
+-----------------------------------------------
+               TOTAL:      0x0248F000
+
+Rounded IOMEM up to: 40Mb.
+Using 7 percent iomem. [40Mb/512Mb]
+
+              Restricted Rights Legend
+
+Use, duplication, or disclosure by the Government is
+subject to restrictions as set forth in subparagraph
+(c) of the Commercial Computer Software - Restricted
+Rights clause at FAR sec. 52.227-19 and subparagraph
+(c) (1) (ii) of the Rights in Technical Data and Computer
+Software clause at DFARS sec. 252.227-7013.
+
+           cisco Systems, Inc.
+           170 West Tasman Drive
+           San Jose, California 95134-1706
+
+
+
+Cisco IOS Software, C2900 Software (C2900-UNIVERSALK9-M), Version 15.2(4)M5, REL                                     EASE SOFTWARE (fc2)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2013 by Cisco Systems, Inc.
+Compiled Fri 13-Sep-13 14:59 by prod_rel_team
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+Installed image archive
+Cisco CISCO2911/K9 (revision 1.0) with 483328K/40960K bytes of memory.
+Processor board ID FCZ1751613L
+3 Gigabit Ethernet interfaces
+2 Serial(sync/async) interfaces
+1 terminal line
+1 Virtual Private Network (VPN) Module
+DRAM configuration is 64 bits wide with parity enabled.
+255K bytes of non-volatile configuration memory.
+250880K bytes of ATA System CompactFlash 0 (Read/Write)
+
+
+         --- System Configuration Dialog ---
+
+Would you like to enter the initial configuration dialog? [yes/no]:  no
+
+Would you like to terminate autoinstall? [yes]: yes
+
+
+Press RETURN to get started!
+
+
+*Jan  2 00:00:04.703: %IOS_LICENSE_IMAGE_APPLICATION-6-LICENSE_LEVEL: Module nam                                     e = c2900 Next reboot level = ipbasek9 and License = ipbasek9
+*Jan  2 00:00:04.859: %IOS_LICENSE_IMAGE_APPLICATION-6-LICENSE_LEVEL: Module nam                                     e = c2900 Next reboot level = securityk9 and License = securityk9
+*May  5 14:57:42.627: %IFMGR-7-NO_IFINDEX_FILE: Unable to open nvram:/ifIndex-ta                                     ble No such file or directory
+*May  5 14:57:42.635: c3600_scp_set_dstaddr2_idb(184)add = 80 name is Embedded-S                                     ervice-Engine0/0
+*May  5 14:58:04.235: %VPN_HW-6-INFO_LOC: Crypto engine: onboard 0  State change                                     d to: Initialized
+*May  5 14:58:04.239: %VPN_HW-6-INFO_LOC: Crypto engine: onboard 0  State change                                     d to: Enabled
+*May  5 14:58:05.023: %LINK-3-UPDOWN: Interface GigabitEthernet0/0, changed stat                                     e to down
+*May  5 14:58:05.023: %LINK-3-UPDOWN: Interface GigabitEthernet0/1, changed stat                                     e to down
+*May  5 14:58:05.023: %LINK-3-UPDOWN: Interface GigabitEthernet0/2, changed stat                                     e to down
+*May  5 14:58:05.027: %LINK-3-UPDOWN: Interface Serial0/0/0, changed state to up
+*May  5 14:58:05.027: %LINK-3-UPDOWN: Interface Serial0/0/1, changed state to do                                     wn
+*May  5 14:58:06.131: %LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEth                                     ernet0/0, changed state to down
+*May  5 14:58:06.131: %LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEth                                     ernet0/1, changed state to down
+*May  5 14:58:06.131: %LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEth                                     ernet0/2, changed state to down
+*May  5 14:58:06.131: %LINEPROTO-5-UPDOWN: Line protocol on Interface Serial0/0/                                     0, changed state to up
+*May  5 14:58:06.131: %LINEPROTO-5-UPDOWN: Line protocol on Interface Serial0/0/                                     1, changed state to down
+*May  5 14:58:59.567: %LINK-3-UPDOWN: Interface Serial0/0/0, changed state to do                                     wn
+*May  5 14:59:00.567: %LINEPROTO-5-UPDOWN: Line protocol on Interface Serial0/0/                                     0, changed state to down
+*May  5 14:59:23.399: %LINK-5-CHANGED: Interface GigabitEthernet0/1, changed sta                                     te to administratively down
+*May  5 14:59:25.391: %LINK-5-CHANGED: Interface Serial0/0/0, changed state to a                                     dministratively down
+*May  5 14:59:25.391: %LINK-5-CHANGED: Interface Embedded-Service-Engine0/0, cha                                     nged state to administratively down
+*May  5 14:59:25.391: %LINK-5-CHANGED: Interface GigabitEthernet0/0, changed sta                                     te to administratively down
+*May  5 14:59:25.391: %LINK-5-CHANGED: Interface GigabitEthernet0/2, changed sta                                     te to administratively down
+*May  5 14:59:25.391: %LINK-5-CHANGED: Interface Serial0/0/1, changed state to a                                     dministratively down
+*May  5 14:59:26.391: %LINEPROTO-5-UPDOWN: Line protocol on Interface Embedded-S                                     ervice-Engine0/0, changed state to down
+*May  5 14:59:26.983: %IP-5-WEBINST_KILL: Terminating DNS process
+*May  5 14:59:35.687: %SYS-5-RESTART: System restarted --
+Cisco IOS Software, C2900 Software (C2900-UNIVERSALK9-M), Version 15.2(4)M5, REL                                     EASE SOFTWARE (fc2)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2013 by Cisco Systems, Inc.
+Compiled Fri 13-Sep-13 14:59 by prod_rel_team
+*May  5 14:59:35.747: %SNMP-5-COLDSTART: SNMP agent on host Router is undergoing                                      a cold start
+*May  5 14:59:36.359: %CRYPTO-6-ISAKMP_ON_OFF: ISAKMP is OFF
+*May  5 14:59:36.359: %CRYPTO-6-GDOI_ON_OFF: GDOI is OFF
+*May  5 14:59:36.359: %CRYPTO-6-ISAKMP_ON_OFF: ISAKMP is OFF
+*May  5 14:59:36.359: %CRYPTO-6-GDOI_ON_OFF: GDOI is OFF
+Router>enav
+Router>ena
+Router>enable
+Router#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#hostname WEST
+WEST(config)#no ip don
+WEST(config)#no ip dom
+WEST(config)#no ip domain-lo
+WEST(config)#no ip domain-lookup
+WEST(config)#ser
+WEST(config)#service en
+WEST(config)#service ena
+WEST(config)#service ena
+WEST(config)#service enable pass
+WEST(config)#service enable s
+WEST(config)#service enable
+WEST(config)#service enable
+WEST(config)#service
+WEST(config)#service
+WEST(config)#service
+WEST(config)#service ?
+  alignment              Control alignment correction and logging
+  call-home              Enable call-home service
+  compress-config        Compress the nvram configuration file
+  config                 TFTP load config files
+  counters               Control aging of interface counters
+  dhcp                   Enable DHCP server and relay agent
+  disable-ip-fast-frag   Disable IP particle-based fast fragmentation
+  exec-callback          Enable exec callback
+  exec-wait              Delay EXEC startup on noisy lines
+  finger                 Allow responses to finger requests
+  hide-telnet-addresses  Hide destination addresses in telnet command
+  linenumber             enable line number banner for each exec
+  nagle                  Enable Nagle's congestion control algorithm
+  old-slip-prompts       Allow old scripts to operate with slip/ppp
+  pad                    Enable PAD commands
+  password-encryption    Encrypt system passwords
+  prompt                 Enable mode specific prompt
+  pt-vty-logging         Log significant VTY-Async events
+  sequence-numbers       Stamp logger messages with a sequence number
+  slave-log              Enable log capability of slave IPs
+  tcp-keepalives-in      Generate keepalives on idle incoming network
+                         connections
+
+WEST(config)#service pas
+WEST(config)#service password-encryption en
+WEST(config)#service password-encryption "?
+% Unrecognized command
+WEST(config)#service password-encryption ?
+  <cr>
+
+WEST(config)#service password-encryption enable
+                                         ^
+% Invalid input detected at '^' marker.
+
+WEST(config)#service password-encryption
+WEST(config)#motd #UFO#
+               ^
+% Invalid input detected at '^' marker.
+
+WEST(config)#motd #
+               ^
+% Invalid input detected at '^' marker.
+
+WEST(config)#motd
+               ^
+% Invalid input detected at '^' marker.
+
+WEST(config)#motd 'UFO'
+               ^
+% Invalid input detected at '^' marker.
+
+WEST(config)#motd
+               ^
+% Invalid input detected at '^' marker.
+
+WEST(config)#banner mot
+WEST(config)#banner motd #UFO#
+WEST(config)#ena
+WEST(config)#ena
+WEST(config)#enable pass
+WEST(config)#enable password
+% Incomplete command.
+
+WEST(config)#enable password class
+WEST(config)#enable sec1
+WEST(config)#enable sec
+WEST(config)#enable secret cisco
+WEST(config)#vt
+WEST(config)#ip int
+WEST(config)#int
+WEST(config)#interface v
+WEST(config)#interface vty
+WEST(config)#interface vty
+WEST(config)#interface vty
+WEST(config)#interface vty
+WEST(config)#interface vty 0 15
+                        ^
+% Invalid input detected at '^' marker.
+
+WEST(config)#interface vty?
+% Unrecognized command
+WEST(config)#line con 0
+WEST(config-line)#logg
+WEST(config-line)#logging sy
+WEST(config-line)#logging synchronous
+WEST(config-line)#exit
+WEST(config)#line v
+WEST(config)#line vty 0 4
+WEST(config-line)#pass
+WEST(config-line)#password cisco
+WEST(config-line)#login
+WEST(config-line)#login
+WEST(config-line)#exit
+WEST(config)#ip rou
+WEST(config)#int G0/1
+WEST(config-if)#ip add
+WEST(config-if)#ip address 172.16.1.1 255.255.255.0
+WEST(config-if)#no shu
+WEST(config-if)#no shutdown
+WEST(config-if)#
+*May  5 15:09:24.063: %LINK-3-UPDOWN: Interface GigabitEthernet0/1, changed stat                                     e to down
+WEST(config-if)#int s0'0'
+*May  5 15:09:27.023: %LINK-3-UPDOWN: Interface GigabitEthernet0/1, changed stat                                     e to up
+*May  5 15:09:28.023: %LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEth                                     ernet0/1, changed state to up
+WEST(config-if)#int s0/0/0
+WEST(config-if)#ip add
+WEST(config-if)#ip address 10.1.1.1 255.255.255.252
+WEST(config-if)#no shu
+WEST(config-if)#no shutdown
+WEST(config-if)#in
+WEST(config-if)#invert
+*May  5 15:09:56.739: %LINK-3-UPDOWN: Interface Serial0/0/0, changed state to up
+*May  5 15:09:57.739: %LINEPROTO-5-UPDOWN: Line protocol on Interface Serial0/0/                                     0, changed state to up
+WEST(config-if)#int tu
+WEST(config-if)#int tu?
+% Unrecognized command
+WEST(config-if)#int ?
+% Unrecognized command
+WEST(config-if)#int
+% Incomplete command.
+
+WEST(config)#inter
+WEST(config)#interface ?
+  Async                    Async interface
+  Auto-Template            Auto-Template interface
+  BVI                      Bridge-Group Virtual Interface
+  CDMA-Ix                  CDMA Ix interface
+  CTunnel                  CTunnel interface
+  Dialer                   Dialer interface
+  Embedded-Service-Engine  cisco embedded service engine module
+  GigabitEthernet          GigabitEthernet IEEE 802.3z
+  Group-Async              Async Group interface
+  LongReachEthernet        Long-Reach Ethernet interface
+  Loopback                 Loopback interface
+  MFR                      Multilink Frame Relay bundle interface
+  Multilink                Multilink-group interface
+  Null                     Null interface
+  Port-channel             Ethernet Channel of interfaces
+  Pseudowire               Pseudowire Interface
+  Serial                   Serial
+  Tunnel                   Tunnel interface
+  Vif                      PGM Multicast Host interface
+  Virtual-PPP              Virtual PPP interface
+  Virtual-Template         Virtual Template interface
+  Virtual-TokenRing        Virtual TokenRing
+  range                    interface range command
+
+WEST(config)#interface t0
+WEST(config-if)#
+*May  5 15:10:24.855: %LINEPROTO-5-UPDOWN: Line protocol on Interface Tunnel0, c                                     hanged state to down
+WEST(config-if)#ip add
+WEST(config-if)#ip address  172.16.12.1
+% Incomplete command.
+
+WEST(config-if)#ip add
+WEST(config-if)#ip address 172.16.12.1
+% Incomplete command.
+
+WEST(config-if)#ip address 172.16.12.1 255.255.255.252
+WEST(config-if)#no shu
+WEST(config-if)#no shutdown
+WEST(config-if)#exit
+WEST(config)#int s
+WEST(config)#int serial0/0/0
+WEST(config-if)#clo
+WEST(config-if)#clock ra
+WEST(config-if)#clock rate 128000
+WEST(config-if)# ip route 0.0.0.0 0.0.0.0 10.1.1.2
+WEST(config)#exit
+WEST#
+*May  5 15:14:40.439: %SYS-5-CONFIG_I: Configured from console by console
+WEST#ping 10.2.2.1
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 10.2.2.1, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 28/28/28 ms
+WEST#show ip in
+WEST#show ip inte
+WEST#show ip interface brief
+Interface                  IP-Address      OK? Method Status                Protocol
+Embedded-Service-Engine0/0 unassigned      YES unset  administratively down down
+GigabitEthernet0/0         unassigned      YES unset  administratively down down
+GigabitEthernet0/1         172.16.1.1      YES manual up                    up
+GigabitEthernet0/2         unassigned      YES unset  administratively down down
+Serial0/0/0                10.1.1.1        YES manual up                    up
+Serial0/0/1                unassigned      YES unset  administratively down down
+Tunnel0                    172.16.12.1     YES manual up                    down
+WEST# interface tunnel 0
+       ^
+% Invalid input detected at '^' marker.
+
+WEST#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+WEST(config)# interface tunnel 0
+WEST(config-if)# ip address 172.16.12.1 255.255.255.252
+WEST(config-if)# tunnel source s0/0/0
+WEST(config-if)# tunnel destination 10.2.2.1
+WEST(config-if)#
+*May  5 15:17:09.147: %LINEPROTO-5-UPDOWN: Line protocol on Interface Tunnel0, c                                     hanged state to up
+WEST(config-if)#show ip interface brief
+                  ^
+% Invalid input detected at '^' marker.
+
+WEST(config-if)#exit
+WEST(config)#show ip interface brief
+               ^
+% Invalid input detected at '^' marker.
+
+WEST(config)#exit
+WEST#show ip interface brief
+*May  5 15:17:33.779: %SYS-5-CONFIG_I: Configured from console by console
+WEST#show ip interface brief
+Interface                  IP-Address      OK? Method Status                Prot                                     ocol
+Embedded-Service-Engine0/0 unassigned      YES unset  administratively down down                                     
+GigabitEthernet0/0         unassigned      YES unset  administratively down down                                     
+GigabitEthernet0/1         172.16.1.1      YES manual up                    up                                       
+GigabitEthernet0/2         unassigned      YES unset  administratively down down                                     
+Serial0/0/0                10.1.1.1        YES manual up                    up                                       
+Serial0/0/1                unassigned      YES unset  administratively down down                                     
+Tunnel0                    172.16.12.1     YES manual up                    up                                       
+WEST#ping 172.16.12.2
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 172.16.12.2, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 32/34/36 ms
+WEST#sh
+% Type "show ?" for a list of subcommands
+WEST#System Bootstrap, Version 15.
+         ^
+% Invalid input detected at '^' marker.
+
+WEST#IOS Image Load Test
+      ^
+% Invalid input detected at '^' marker.
+
+WEST#___________________
+Translating "___________________"
+
+% Bad IP address or host name
+Translating "___________________"
+
+% Unknown command or computer name, or unable to find computer address
+WEST#Digitally Signed Release Software
+       ^
+% Invalid input detected at '^' marker.
+
+WEST#program load complete, entry point: 0x81000000, size: 0x5e81be0
+        ^
+% Invalid input detected at '^' marker.
+
+WEST#$                                              ################
+Self decompressing the image : #################################################  ^
+                                                                             ###
+#############
+
+% Invalid input detected at '^' marker.
+
+WEST#
+WEST#Smart Init is enabled
+      ^
+% Invalid input detected at '^' marker.
+
+WEST#smart init is sizing iomem
+      ^
+% Invalid input detected at '^' marker.
+
+WEST#                 TYPE      MEMORY_REQ
+                       ^
+% Invalid input detected at '^' marker.
+
+WEST#          HWIC Slot 0      0x00200000
+                 ^
+% Invalid input detected at '^' marker.
+
+WEST#    Onboard devices &
+         ^
+% Invalid input detected at '^' marker.
+
+WEST#         buffer pools      0x0228F000
+               ^
+% Invalid input detected at '^' marker.
+
+WEST#-----------------------------------------------
+Translating "-----------------------------------------------"
+
+% Bad IP address or host name
+Translating "-----------------------------------------------"
+
+% Unknown command or computer name, or unable to find computer address
+WEST#               TOTAL:      0x0248F000
+                     ^
+% Invalid input detected at '^' marker.
+
+WEST#
+WEST#Rounded IOMEM up to: 40Mb.
+      ^
+% Invalid input detected at '^' marker.
+
+WEST#Using 7 percent iomem. [40Mb/512Mb]
+      ^
+% Invalid input detected at '^' marker.
+
+WEST#
+WEST#              Restricted Rights Legend
+                       ^
+% Invalid input detected at '^' marker.
+
+WEST#
+WEST#Use, duplication, or disclosure by the Government is
+      ^
+% Invalid input detected at '^' marker.
+
+WEST#subject to restrictions as set forth in subparagraph
+      ^
+% Invalid input detected at '^' marker.
+
+WEST#(c) of the Commercial Computer Software - Restricted
+     ^
+% Invalid input detected at '^' marker.
+
+WEST#Rights clause at FAR sec. 52.227-19 and subparagraph
+      ^
+% Invalid input detected at '^' marker.
+
+WEST#(c) (1) (ii) of the Rights in Technical Data and Computer
+     ^
+% Invalid input detected at '^' marker.
+
+WEST#Software clause at DFARS sec. 252.227-7013.
+              ^
+% Invalid input detected at '^' marker.
+
+WEST#
+WEST#           cisco Systems, Inc.
+                 ^
+% Invalid input detected at '^' marker.
+
+WEST#           170 West Tasman Drive
+                 ^
+% Invalid input detected at '^' marker.
+
+WEST#           San Jose, California 95134-1706
+                 ^
+% Invalid input detected at '^' marker.
+
+WEST#
+WEST#
+WEST#
+WEST#$                                              EASE SOFTWARE (f
+Cisco IOS Software, C2900 Software (C2900-UNIVERSALK9-M), Version 15.2(4)M5, REL ^
+                                                                             EAS
+E SOFTWARE (f
+
+% Invalid input detected at '^' marker.
+
+WEST#Technical Support: http://www.cis986-2013 by Cisco Systems, Inc.
+       ^
+% Invalid input detected at '^' marker.
+
+WEST#Compiled Fri 13-Sep-13 14:59 by prod_rel_team
+       ^
+% Invalid input detected at '^' marker.
+
+WEST#
+WEST#
+WEST#This product contains cryptographic features and is subject to United
+      ^
+% Invalid input detected at '^' marker.
+
+WEST#States and local country laws governing import, export, transfer and
+        ^
+% Invalid input detected at '^' marker.
+
+WEST#use. Delivery of Cisco cryptographic products does not imply
+      ^
+% Invalid input detected at '^' marker.
+
+WEST#third-party authority to import, export, distribute or use encryption.
+      ^
+% Invalid input detected at '^' marker.
+
+WEST#Importers, exporters, distributors and users are responsible for
+      ^
+% Invalid input detected at '^' marker.
+
+WEST#compliance with U.S. and local country laws. By using this product you
+       ^
+% Invalid input detected at '^' marker.
+
+WEST#agree to comply with apple
+      ^
+% Invalid input detected at '^' marker.
+
+WEST#to comply with U.S. and local laws, return this product immediately.
+      ^
+% Invalid input detected at '^' marker.
+
+WEST#
+WEST#$f U.S. laws governing Cisco cryptographic products may be found at:
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+   ^
+% Invalid input detected at '^' marker.
+
+WEST#http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+% Bad IP address or host name
+% Unknown command or computer name, or unable to find computer address
+WEST#
+WEST#If you require further assistance please contact us by sending email to
+        ^
+% Invalid input detected at '^' marker.
+
+WEST#export@cisco.com.
+% Bad IP address or host name
+% Unknown command or computer name, or unable to find computer address
+WEST#
+WEST#Installed image archive
+      ^
+% Invalid input detected at '^' marker.
+
+WEST#Cisco CISCO2911/K9 (revision 1.0) with 483328K/40960K bytes of memory.
+      ^
+% Invalid input detected at '^' marker.
+
+WEST#Pro 64 bits wide with parity enabled.
+             ^
+% Invalid input detected at '^' marker.
+
+WEST#255K bytes of non-volatile configuration memory.
+     ^
+% Invalid input detected at '^' marker.
+
+WEST#$         e = c2900 Next reboot level = ipbasek9 and License = ipbasek9
+250880K bytes of ATA System Com                   e = c2900 Next reboot level = ^ipbasek9 and License = ipbasek9
+
+% Invalid input detected at '^' marker.
+
+WEST#$                                   ble No such file or directory
+*Jan  2 00:00:04.859: %IOS_LICENSE_IMA                                          ^                ble No such file or
+
+% Invalid input detected at '^' marker.
+
+WEST#$ name is Embedded-S                                 d to: Initialized
+*May  5 14:57:42.635: c3600_scp_set_dstaddr2_idb(184)add = 80 name is Embedded-S^                                 d t
+
+% Invalid input detected at '^' marker.
+
+WEST#$   OWN: Interface GigabitEthernet0/1, changed stat
+*May  5 14:58:04.239: %VPN_HW-6-INFO_LOC: Crypto engine: onboard 0  State change^
+                                  OWN: Interface GigabitEthernet0/1, changed sta
+t
+
+% Invalid input detected at '^' marker.
+
+WEST#$                                  state to administratively down
+*May  5 14:59:25.391: %LINK-5-CHANGED: Interface Serial0/0/0, changed state to a^
+                                   state to administratively down
+
+% Invalid input detected at '^' marker.
+
+WEST#$                                                        te to adm
+*May  5 14:59:25.391: %LINK-5-CHANGED: Interface GigabitEthernet0/0, changed sta^
+                                                                             te
+to adm
+
+% Invalid input detected at '^' marker.
+
+WEST#$                          -WEBINST_KILL: Terminating DNS process
+*May  5 14:59:25.391: %LINK-5-CHANGED: Interface Serial0/0/1, changed state to a^
+BINST_KILL: Terminating DNS process
+
+% Invalid input detected at '^' marker.
+
+WEST#*May  5 14:59:35.687: %SYS-5-RESTART: System restarted --
+     ^
+% Invalid input detected at '^' marker.
+
+WEST#$                                                  a cold start
+Cisco IOS Software, C2900 Software (C2900-UNIVERSALK9-M), Version 15r is undergo ^ing
+
+ a cold start
+
+% Invalid input detected at '^' marker.
+
+WEST#$59:36.359: %CRYPTO-6-ISAKMP_ON_OFF: ISAKWEST(config)#no ip don
+     ^
+% Invalid input detected at '^' marker.
+
+WEST#WEST(co configuration file
+       ^
+% Invalid input detected at '^' marker.
+
+WEST#  config                 TFTP load config files
+                               ^
+% Invalid input detected at '^' marker.
+
+WEST#  counters              gle                  Enable Nagle's nnections
+         ^
+% Invalid input detected at '^' marker.
+
+WEST#
+WEST#WEST(config)#service pas
+       ^
+% Invalid input detected at '^' marker.
+
+WEST#WEST(config)#service password-encryption en
+       ^
+% Invalid input detected at '^' marker.
+
+WEST#WEST(confi   ^
+       ^
+% Invalid input detected at '^' marker.
+
+WEST#% Invalid input detected e v
+     ^
+% Invalid input detected at '^' marker.
+
+WEST#WEST(config)#interface vty
+       ^
+% Invalid input detected at '^' marker.
+
+WEST#WEST(config)#interface vty
+       ^
+% Invalid input detected at '^' marker.
+
+WEST#WEST(confi)#exit
+% Bad IP address or host name
+% Unknown command or computer name, or unable to find computer address
+WEST#WEST(config)#ip rou
+       ^
+% Invalid input detected at '^' marker.
+
+WEST#WEST(config)#int G0/1
+       ^
+% Invalid input detected at '^' marker.
+
+WEST#WEST                              own
+       ^
+% Invalid input detected at '^' marker.
+
+WEST#WEST(config-if)#in
+% Bad IP address or host name
+% Unknown command or computer name, or unable to find computer address
+WEST#WEST(config-if)#invert
+% Bad IP address or host name
+% Unknown command or computer name, or unable to find computer address
+WEST#*May  5 15:09:56.739: %LINK-
+     ^
+% Invalid input detected at '^' marker.
+
+WEST#WEST(config)#interface ?
+% Unrecognized command
+WEST#WEST(config)#interface
+% Bad IP address or host name
+% Unknown command or computer name, or unable to find computer address
+WEST#  Async             opback interface
+        ^
+% Invalid input detected at '^' marker.
+
+WEST#  MFR                      Multilink Frame Relay bundle interface
+        ^
+% Invalid input detected at '^' marker.
+
+WEST#  Multilink                Multilink-group interface
+        ^
+% Invalid input detected at '^' marker.
+
+WEST#  Null                     Null interface
+        ^
+% Invalid input detected at '^' marker.
+
+WEST#  Port-channel             Ethernet Channel of interfaces
+         ^
+% Invalid input detected at '^' marker.
+
+WEST#  Pseudowire               Pseudowire Interface
+        ^
+% Invalid input detected at '^' marker.
+
+WEST#  Serial                   Serial
+          ^
+% Invalid input detected at '^' marker.
+
+WEST#  Tunnel                   Tunnel interface
+                                       ^
+% Invalid input detected at '^' marker.
+
+WEST#  Vif                      PGM Multicast Host interface
+        ^
+% Invalid input detected at '^' marker.
+
+WEST# Ring
+Translating "Ring"
+
+% Bad IP address or host name
+Translating "Ring"
+
+% Unknown command or computer name, or unable to find computer address
+WEST#  range                    interface range command
+        ^
+% Invalid input detected at '^' marker.
+
+WEST#
+WEST#WEST(config)#interface t0
+       ^
+% Invalid input detected at '^' marker.
+
+WEST#.12.1 255.255.255.252
+     ^
+% Invalid input detected at '^' marker.
+
+WEST#WEST(conT#show ip in
+       ^
+% Invalid input detected at '^' marker.
+
+WEST#$          unassigned      YES unset  administratively down down
+WEST#show ip inte              unassigned      YES unset  administratively down   ^down
+
+% Invalid input detected at '^' marker.
+
+WEST#$                                              IP-Address      OK?
+% Unrecognized command
+WEST#$
+Tunnel0        0, c                                                                   ^                           IP-
+
+
+% Invalid input detected at '^' marker.
+
+WEST#$al up                    up                                        \
+Serial0/0/0                10.1.1.1        YES manual u2.1     YES manual up       ^                up
+
+% Invalid input detected at '^' marker.
+
+WEST#
+WEST#
+WEST#router ospf 1
+      ^
+% Invalid input detected at '^' marker.
+
+WEST#en
+WEST#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+WEST(config)#router ospf 1
+WEST(config-router)#
+WEST(config-router)#
+WEST(config-router)#
+WEST(config-router)#network 172.16.1.0 0.0.0.255 area 0
+WEST(config-router)#network 172.16.12.0 0.0.0.3 area 0
+WEST(config-router)#
+*May  5 15:35:48.875: %OSPF-5-ADJCHG: Process 1, Nbr 172.16.12.2 on Tunnel0 from LOADING to FULL, Loading Done
+WEST(config-router)#
