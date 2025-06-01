@@ -3,6 +3,8 @@
 %║	mgr inż. Dawid Kotlarski  ║
 %║		  06.10.2024		  ║
 %╚════════════════════════════╝
+
+
 \documentclass[12pt,twoside,a4paper,openany]{article}
 
     \input{preambula_pakiety.tex}
@@ -61,13 +63,22 @@
 %%%%%%%%%%%%%%%%%%% treść główna dokumentu %%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Założenia projektowe – wymagania}
 
+
 \subsection{Cel projektu}
 \begin{itemize}
     \item Konfiguracja tunelu GRE (Generic Routing Encapsulation) typu punkt-punkt między routerami WEST i EAST.
     \item Umożliwienie komunikacji między sieciami LAN poprzez sieć publiczną (ISP).
     \item Wykorzystanie protokołu OSPF do dynamicznego routingu wewnątrz tunelu.
 \end{itemize}
+\subsection{Informacje o projekcie}
 
+
+
+\fg[\linewidth]{rys/tabela.png}{tabela z adresami}{rys-tabela}
+\clearpage
+\fg[\linewidth]{rys/image.png}{schemat logiczny projektu}{rys-tabela}
+
+\clearpage
 \subsection{Wymagania sprzętowe i programowe}
 \begin{itemize}
     \item \textbf{Routery}: 3 × Cisco 1941 (IOS 15.2(4)M3) – WEST, EAST, ISP.
@@ -151,25 +162,147 @@ network 172.16.12.0 0.0.0.3 area 0       # Sieć tunelu
     \item OSPF dynamicznie aktualizuje trasy, co ułatwia skalowalność\\ (np.\ dodanie nowej sieci LAN wymaga tylko aktualizacji OSPF).
 \end{itemize}
 
-\section{Dokumentacja graficzna}
+\section{Konfiguracja ISP}
 
-\fg{Kaleta part 2/ISP/1.png}{Konfiguracja ISP}{ISP-1}
-\fg{Kaleta part 2/ISP/2.png}{Konfiguracja ISP}{ISP-2}
+\begin{figure}[h]
+    \centering
+    \begin{minipage}{0.49\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Kaleta part 2/ISP/1.png}
+        \caption{Konfiguracja ISP}
+        \label{fig:ISP-1}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.49\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Kaleta part 2/ISP/2.png}
+        \caption{Konfiguracja ISP}
+        \label{fig:ISP-2}
+    \end{minipage}
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \begin{minipage}{0.49\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Kaleta part 2/ISP/3.png}
+        \caption{Konfiguracja ISP}
+        \label{fig:ISP-3}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.49\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Kaleta part 2/ISP/4.png}
+        \caption{Konfiguracja ISP}
+        \label{fig:ISP-4}
+    \end{minipage}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Kaleta part 2/ISP/5.png}
+    \caption{Konfiguracja ISP}
+    \label{fig:ISP-5}
+\end{figure}
+% \fg{Kaleta part 2/ISP/2.png}{Konfiguracja ISP}{ISP-2}
+
+% \fg{Kaleta part 2/ISP/3.png}{Konfiguracja ISP}{ISP-3}
+% \fg{Kaleta part 2/ISP/4.png}{Konfiguracja ISP}{ISP-4}
+
+% \fg{Kaleta part 2/ISP/5.png}{Konfiguracja ISP}{ISP-5}
 \clearpage
+\section{Dokumentacja EAST I WEST}
+\subsection*{Konfiguracja routera WEST}
+\begin{lstlisting}[caption={Konfiguracja routera WEST}, label={lst:west-config}]
+hostname WEST
+!
+version 15.2(4)M5
+!
+service password-encryption
+no ip domain-lookup
+!
+enable secret cisco
+enable password class
+!
+banner motd #UFO#
+!
+interface GigabitEthernet0/1
+ip address 172.16.1.1 255.255.255.0
+no shutdown
+!
+interface Serial0/0/0
+ip address 10.1.1.1 255.255.255.252
+clock rate 128000
+no shutdown
+!
+interface Tunnel0
+ip address 172.16.12.1 255.255.255.252
+tunnel source Serial0/0/0
+tunnel destination 10.2.2.1
+no shutdown
+!
+router ospf 1
+network 172.16.1.0 0.0.0.255 area 0
+network 172.16.12.0 0.0.0.3 area 0
+!
+ip route 0.0.0.0 0.0.0.0 10.1.1.2
+!
+line con 0
+logging synchronous
+line vty 0 4
+password cisco
 
-\fg{Kaleta part 2/ISP/3.png}{Konfiguracja ISP}{ISP-3}
-\fg{Kaleta part 2/ISP/4.png}{Konfiguracja ISP}{ISP-4}
-\clearpage
+\end{lstlisting}
 
-\fg{Kaleta part 2/ISP/5.png}{Konfiguracja ISP}{ISP-5}
+\subsection*{Konfiguracja routera EAST}
+\begin{lstlisting}[caption={Konfiguracja routera EAST}, label={lst:east-config}]
+hostname EAST
+!
+version 15.2
+!
+service password-encryption
+no ip domain-lookup
+!
+enable secret 4 tnhtc92DXBhelxjYk8LWJrPV36S2i4ntXrpb4RFmfqY
+enable password 7 02050D480809
+!
+banner motd ^CEAST^C
+!
+interface GigabitEthernet0/1
+ip address 172.16.2.1 255.255.255.0
+no shutdown
+!
+interface Serial0/0/1
+ip address 10.2.2.1 255.255.255.252
+no shutdown
+!
+interface Tunnel0
+ip address 172.16.12.2 255.255.255.252
+tunnel source 10.2.2.1
+tunnel destination 10.1.1.1
+no shutdown
+!
+router ospf 1
+network 172.16.2.0 0.0.0.255 area 0
+network 172.16.12.0 0.0.0.3 area 0
+!
+ip route 0.0.0.0 0.0.0.0 10.2.2.2
+!
+line con 0
+logging synchronous
+line vty 0 4
+password 7 05080F1C2243
+login
+transport input all
+!
+end
+\end{lstlisting}
 
-\section{Dodatkowe uwagi}
+\section{Podsumowanie}
 \begin{itemize}
-    \item \textbf{Rozszerzenie projektu}:
-    \begin{itemize}        \item Dodanie IPSec dla bezpieczeństwa (np.\ konfiguracja profilu kryptograficznego).
-        \item Testy wydajnościowe (np.\ pomiar opóźnień przez tunel).
-    \end{itemize}
-    \item \textbf{Dokumentacja}: Zaleca się użycie narzędzi takich jak \textbf{Packet Tracer} do wizualizacji topologii lub \textbf{Wireshark} do analizy ruchu w tunelu.
+    \item Projekt umożliwił skonfigurowanie tunelu GRE między dwoma routerami, co pozwoliło na komunikację między sieciami LAN poprzez sieć publiczną.
+    \item Wykorzystanie protokołu OSPF umożliwiło dynamiczne zarządzanie trasami w tunelu.
+    \item Testy potwierdziły poprawność konfiguracji i działanie tunelu GRE.
+    \item Zidentyfikowano, że tunel GRE nie zapewnia szyfrowania danych, co jest istotne w kontekście bezpieczeństwa. W przyszłości zaleca się rozważenie dodania szyfrowania IPSec do tunelu GRE.
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%% koniec treść główna dokumentu %%%%%%%%%%%%%%%%%%%%%
@@ -183,21 +316,21 @@ network 172.16.12.0 0.0.0.3 area 0       # Sieć tunelu
 \renewcommand{\cftparskip}{3pt}
 \clearpage
 \renewcommand{\cftloftitlefont}{\Large\bfseries\sffamily}
-\listoffigures
-\addcontentsline{toc}{section}{Spis rysunków}
-\thispagestyle{fancy}
+% \listoffigures
+% \addcontentsline{toc}{section}{Spis rysunków}
+% \thispagestyle{fancy}
 
-\newpage
-\renewcommand{\cftlottitlefont}{\Large\bfseries\sffamily}
-\def\listtablename{Spis tabel}
-\addcontentsline{toc}{section}{Spis tabel}\listoftables
-\thispagestyle{fancy}
+% \newpage
+% \renewcommand{\cftlottitlefont}{\Large\bfseries\sffamily}
+% \def\listtablename{Spis tabel}
+% \addcontentsline{toc}{section}{Spis tabel}\listoftables
+% \thispagestyle{fancy}
 
-\newpage
-\renewcommand{\cftlottitlefont}{\Large\bfseries\sffamily}
-\renewcommand{\lstlistlistingname}{Spis listingów}
-\addcontentsline{toc}{section}{Spis listingów}\lstlistoflistings
-\thispagestyle{fancy}
+% \newpage
+% \renewcommand{\cftlottitlefont}{\Large\bfseries\sffamily}
+% \renewcommand{\lstlistlistingname}{Spis listingów}
+% \addcontentsline{toc}{section}{Spis listingów}\lstlistoflistings
+% \thispagestyle{fancy}
 
 %lista rzeczy do zrobienia: wypisuje na koñcu dokumentu, patrz: pakiet todo.sty
 \todos
